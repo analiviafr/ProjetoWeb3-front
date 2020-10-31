@@ -1,0 +1,325 @@
+.IpRegister {
+  width: 100%;
+  text-align: center;
+  clear: both;
+  color:rgb(138, 5, 190);
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.IpRegister input {
+  width: 100%;
+  clear: both;
+}
+
+.mapTitle{
+  margin-right: auto;
+  padding-top: 2%;
+  font-size: 28px;
+}
+
+input[type=ipr], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=ipr], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=city], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=city], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=continent], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=continent], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=country], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=country], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=latitude], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=latitude], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=longitude], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=longitude], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=timezone], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=timezone], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=radius], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=radius], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=postal], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=postal], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=countryCode], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=countryCode], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=countryAbbreviator], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=countryAbbreviator], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=stateCode], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=stateCode], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=stateAbbreviator], select {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 6.25rem;
+  transition: all .2s linear;
+}
+
+input[type=stateAbbreviator], focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+textarea {
+  border: none;
+  padding-left: 100px;
+  background-color: #EDDEF2;
+  color: rgb(138, 5, 190);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 50%;
+  height: 200px;
+  border-radius: 2.5rem;
+  transition: all .2s linear;
+}
+
+textarea, focus {
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
+}
+
+input[type=file], select{
+  border: none;
+  padding:.5rem 2rem;
+  margin-right: 0%;
+  font-size: 1.2rem;
+  width: 45%;
+  cursor: pointer;
+}
+
+
+.VoltarBtn{
+  border: none;
+  background-color: rgb(138,5,190);
+  color:#fdfdfd;
+  padding:.5rem 2rem;
+  margin-right: 10px;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  border-radius:6.25rem;
+  width: 20%;
+  height: 52px;
+  cursor: pointer;
+}
+
+.VoltarBtn:hover{
+  background-color: rgb(145, 11, 193);
+}
+
+.VoltarBtn:focus{
+  outline:none;
+}
+
+.RegisterIpBtn{
+  border: none;
+  background-color: rgb(138,5,190);
+  color:#fdfdfd;
+  padding:.5rem 2rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  border-radius:6.25rem;
+  width: 30%;
+  height: 52px;
+  cursor: pointer;
+}
+
+.RegisterIpBtn:hover{
+  background-color: rgb(145, 11, 193);
+}
+
+.RegisterIpBtn:focus{
+  outline:none;
+}

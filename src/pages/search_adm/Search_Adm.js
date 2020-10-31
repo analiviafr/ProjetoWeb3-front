@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import kwelo from '../../Kwelo';
+import {Link} from 'react-router-dom';
 import './styles/tela_search_adm_grande.css';
 import './styles/tela_search_adm_media.css';
 import './styles/tela_search_adm_pequena.css';
@@ -20,6 +21,8 @@ function Search() {
   const [isoPais,setIsoPais] = useState('');
   const [codEstado,setCodEstado] = useState('');
   const [isoEstado,setIsoEstado] = useState('');
+  const [note,setNote] = useState('');
+  const [map,setMap] = useState('');
   const [insert,setInsert] = useState('');
   const [setFlag] = useState('');
 
@@ -146,7 +149,7 @@ function Search() {
               onChange = {evento => setInsert(evento.target.value)}
              />
             <button className="enviaButton" type="submit">Buscar</button>
-            <button className="cadastraButton" type="submit">Cadastrar IP</button>
+            <Link to="/ipregister"><button className="cadastraButton">Cadastrar IP</button></Link>
           </form>
         </div>
         {
@@ -165,6 +168,8 @@ function Search() {
               <p><span>Sigla do país: {isoPais}</span></p>
               <p><span>Código do estado: {codEstado}</span></p>
               <p><span>Sigla do estado: {isoEstado}</span></p>
+              <p><span>Observações: {note}</span></p>
+              <p><span>Mapa: {map}</span></p>
           </div>
         }
       </header>
