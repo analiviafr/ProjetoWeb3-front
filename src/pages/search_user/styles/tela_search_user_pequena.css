@@ -1,0 +1,141 @@
+@media only screen and (max-width: 770px){
+
+  @font-face{
+    font-family: Graphik-Regular;
+    src: url('https://cdn.nubank.com.br/fonts/Graphik/variants/Graphik-Regular.woff2') format('woff2'),url('https://cdn.nubank.com.br/fonts/Graphik/variants/Graphik-Regular.woff') format('woff'),url('https://cdn.nubank.com.br/fonts/Graphik/variants/Graphik-Regular.ttf') format('truetype'),url('https://cdn.nubank.com.br/fonts/Graphik/variants/Graphik-Regular.svg#Graphik-Regular') format('svg'),url('https://cdn.nubank.com.br/fonts/Graphik/variants/Graphik-Regular.eot?#iefix') format('embedded-opentype');
+    font-style: normal;
+    font-display: fallback;
+  }
+
+  nav{
+      background-color: white;
+      box-shadow: 0 0 0.2em rgb(175, 175, 175); /* offset-x | offset-y | blur-radius | color */
+      display: flex;
+      height: 80px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0%;
+  }
+
+  /*bloco de menu*/
+  .menu{
+      width: 1000px;
+      height: 38px;
+      display: flex;
+      overflow: hidden; /*O que ultrapassar é cortado e o restante do conteúdo fica invisível*/
+  }
+
+  .logo img{
+      width: 45px;
+      padding: 0px 20px 0px 32px; /*distância entre o conteúdo e a borda superior | direita | inferior | esquerda */
+  }
+
+  .logo a{
+      text-decoration: none;
+  }
+
+  /*estilo da lista presente no menu da barra de navegação*/
+  ul{
+      display: none;
+  }
+
+  li{
+      display: none;
+  }
+
+
+  /*bloco para os botões de login*/
+  .LoginBusca{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 350px;
+      margin-right: 2%;
+  }
+
+  /*botão de login*/
+  .bt_loginb{
+      height: 80px;
+      width: 121px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .bt_loginb a{
+      color:rgb(138, 5, 190);
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+  }
+
+  .bt_loginb a:hover{
+      text-decoration: underline;
+  }
+
+  .tituloBusca{
+    width: 800%;
+    text-align: center;
+    clear: both;
+    color:rgb(138, 5, 190);
+    margin-top: -450px;
+    margin-left: auto;
+    position: fixed;
+  }
+
+  input[type=ip], select {
+    border: none;
+    background-color: #EDDEF2;
+    color: black;
+    padding: 1rem;
+    font-size: 1.2rem;
+    width: 330px;
+    border-radius: 6.25rem;
+    transition: all .2s linear;
+    margin-left: -240px;
+    margin-top: -190px;
+    margin-bottom: 50px;
+    position: fixed;
+  }
+
+  input[type=ip], focus {
+    box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+    outline:none;
+  }
+
+  .enviaButton1{
+    border: none;
+    background-color: rgb(138,5,190);
+    color:#fdfdfd;
+    padding:.5rem 2rem;
+    font-size: 1.2rem;
+    border-radius:6.25rem;
+    margin-left: 130px;
+    margin-top: -190px;
+    width: 22%;
+    height: 52px;
+    cursor: pointer;
+    position: fixed;
+  }
+
+  .enviaButton1:hover{
+    background-color: rgb(145, 11, 193);
+  }
+
+  .enviaButton1:focus{
+    outline:none;
+  }
+
+  .resultado{
+    line-height: 28px;
+    font-size: 20px;
+    margin-top: 120px;
+    margin-left: -33%;
+    position: fixed;
+    color: rgb(138, 5, 190);
+    font-weight: bold;
+  }
+
+}

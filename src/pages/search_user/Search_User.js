@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import kwelo from '../../Kwelo';
-import './styles/tela_search_grande.css';
-import './styles/tela_search_media.css';
-import './styles/tela_search_pequena.css';
+import './styles/tela_search_user_grande.css';
+import './styles/tela_search_user_media.css';
+import './styles/tela_search_user_pequena.css';
 import logo from './img/logo.png';
 
 function Search() {
@@ -140,12 +140,12 @@ function Search() {
           <form onSubmit={envia}>
             <input
               id = "ip"
-              type = "text"
+              type = "ip"
               value = {insert}
               placeholder = "Apenas números e pontos"
               onChange = {evento => setInsert(evento.target.value)}
              />
-            <button className="enviaButton" type="submit">Buscar</button>
+            <button className="enviaButton1" type="submit">Buscar</button>
           </form>
         </div>
         {

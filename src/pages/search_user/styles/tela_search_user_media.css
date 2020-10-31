@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1100px){
+@media only screen and (min-width: 771px) and (max-width: 1099px){
 
   @font-face{
     font-family: Graphik-Regular;
@@ -73,13 +73,14 @@
       color:rgb(186, 77, 227);
   }
 
+
   /*bloco para os botões de login*/
   .LoginBusca{
       display: flex;
       align-items: center;
       height: 100%;
       width: 350px;
-      margin-right: -200px;
+      margin-right: -100px;
   }
 
   /*botão de login*/
@@ -108,31 +109,31 @@
     clear: both;
     color:rgb(138, 5, 190);
     margin-top: -750px;
-    margin-left: auto;
+    margin-left: 10%;
     position: fixed;
   }
 
-  input[type=text], select {
+  input[type=ip], select {
     border: none;
     background-color: #EDDEF2;
     color: black;
     padding: 1rem;
     font-size: 1.2rem;
-    width: 350px;
+    width: 330px;
     border-radius: 6.25rem;
     transition: all .2s linear;
-    margin-left: -260px;
+    margin-left: -240px;
     margin-top: -340px;
     margin-bottom: 50px;
     position: fixed;
   }
 
-  input[type=text], focus {
+  input[type=ip], focus {
     box-shadow: 5px 4px 4px rgba(138,5,190,.35);
     outline:none;
   }
 
-  .enviaButton{
+  .enviaButton1{
     border: none;
     background-color: rgb(138,5,190);
     color:#fdfdfd;
@@ -141,25 +142,25 @@
     border-radius:6.25rem;
     margin-left: 130px;
     margin-top: -340px;
-    width: 10%;
+    width: 22%;
     height: 52px;
     cursor: pointer;
     position: fixed;
   }
 
-  .enviaButton:hover{
+  .enviaButton1:hover{
     background-color: rgb(145, 11, 193);
   }
 
-  .enviaButton:focus{
+  .enviaButton1:focus{
     outline:none;
   }
 
   .resultado{
     line-height: 28px;
     font-size: 20px;
-    margin-top: -175px;
-    margin-left: -200px;
+    margin-top: -180px;
+    margin-left: -20%;
     position: fixed;
     color: rgb(138, 5, 190);
     font-weight: bold;
