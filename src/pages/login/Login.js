@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import api from '../../services/api';
 
 import './Login.css';
 
@@ -10,6 +11,7 @@ export default function Login() {
   const [error, setError] = useState(['']);
   const [flag, setFlag] = useState('');
   const [message, setMessage] = useState('');
+  const [role, setRole] = useState('');
 
   async function onLoginSubmit(e) {
     e.preventDefault();
@@ -17,21 +19,48 @@ export default function Login() {
       setError('E-mail inválido');
       return;
     }
+
+    if (email.length <= 7) {
+      setError('E-mail inválido');
+      return;
+    }
+
     if(!password){
       setError('Senha inválida');
       return;
     }
 
+    if (password.length <= 8) {
+      setError('Sua senha deve conter ao menos 8 caracteres');
+      return;
+    }
+
+    const data = {
+      email,
+      password
+    };
+
     try {
-      const res = await axios.post('https://reqres.in/api/login', {"email": email,"password": password});
+      const res = await api.post('auth/authenticate', data);
       localStorage.setItem('app-token', res.data.token);
+      localStorage.setItem('app-token', res.data.user.role);
+
       setError('');
+
       setFlag(localStorage.getItem('app-token'));
       setMessage('Login realizado com sucesso! Você será redirecionado(a) para a página de Pesquisa.');
+
+      if (localStorage.getItem('app-token:role') === 'admin') {
+        setRole(localStorage.getItem('app-token:role'));
+      }
+      else {
+        setRole(null);
+      }
+
       setTimeout(function () {
         window.location = '/ProjetoWeb2/#/search';
        }, 2000);
-      
+
     } catch{
       setError('Endereço de email ou senha inválido.');
       return;
@@ -40,6 +69,12 @@ export default function Login() {
 
   useEffect(() => {
     setFlag(localStorage.getItem('app-token'));
+    if (localStorage.getItem('app-token:role') === 'admin') {
+      setRole(localStorage.getItem('app-token:role'));
+    }
+    else {
+      setRole(null);
+    }
   },[])
 
 
