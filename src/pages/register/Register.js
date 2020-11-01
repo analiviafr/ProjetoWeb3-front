@@ -29,6 +29,11 @@ function Register() {
       return;
     }
 
+    if (!role) {
+      setError('Escolha um tipo de usuário');
+      return;
+    }
+
     if (password.length <= 8) {
       setError('Sua senha deve conter ao menos 8 caracteres');
       return;
@@ -51,6 +56,7 @@ function Register() {
       setTimeout(function () {
         setError('');
         setEmail('');
+        setRole('');
         setPassword('');
        }, 2000);
     }

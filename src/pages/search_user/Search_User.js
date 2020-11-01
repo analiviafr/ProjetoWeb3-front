@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import kwelo from '../../Kwelo';
 import './styles/tela_search_user_grande.css';
 import './styles/tela_search_user_media.css';
 import './styles/tela_search_user_pequena.css';
@@ -21,6 +20,8 @@ function Search() {
   const [isoPais,setIsoPais] = useState('');
   const [codEstado,setCodEstado] = useState('');
   const [isoEstado,setIsoEstado] = useState('');
+  const [note, setNote] = useState('');
+  const [map, setMap] = useState('');
   const [insert,setInsert] = useState('');
   const [setFlag] = useState('');
 
@@ -39,6 +40,8 @@ function Search() {
       setIsoPais('');
       setCodEstado('');
       setIsoEstado('');
+      setNote('');
+      setMap('');
       var i = 0; //cria uma variável para auxiliar na leitura da string obtida
       for(var c=0;c<insert.length;c++){ //percorre a string obtida
         const numero = /[0-9]/; //cria uma constante para checar se há números na string
@@ -83,20 +86,22 @@ function Search() {
       }
       else{
         try{
-          const json = await kwelo.get(`https://api.kwelo.com/v1/network/ip-address/location/${insert}`);
-          setIp(json.data.data.ip_address); //atualiza o estado para o valor recebido pela requisição
-          setCidade(json.data.data.geolocation.city.names.en);
-          setContinente(json.data.data.geolocation.continent.names["pt-BR"]);
-          setPais(json.data.data.geolocation.country.names["pt-BR"]);
-          setRaio(json.data.data.geolocation.location.accuracy_radius);
-          setLatitude(json.data.data.geolocation.location.latitude);
-          setLongitude(json.data.data.geolocation.location.longitude);
-          setTimeZone(json.data.data.geolocation.location.time_zone);
-          setPostal(json.data.data.geolocation.postal.code);
-          setCodPais(json.data.data.geolocation.registered_country.geoname_id);
-          setIsoPais(json.data.data.geolocation.registered_country.iso_code);
-          setCodEstado(json.data.data.geolocation.subdivisions[0].geoname_id);
-          setIsoEstado(json.data.data.geolocation.subdivisions[0].iso_code);
+          const res = await api.get(`ip/${insert}`);
+          setIp(res.data.ip.ip); //atualiza o estado para o valor recebido pela requisição
+          setCidade(res.data.ip.city);
+          setContinente(res.data.ip.continent);
+          setPais(res.data.ip.country);
+          setRaio(res.data.ip.radius);
+          setLatitude(res.data.ip.latitude);
+          setLongitude(res.data.ip.longitude);
+          setTimeZone(res.data.ip.timezone);
+          setPostal(res.data.ip.postal);
+          setCodPais(res.data.ip.countryCode);
+          setIsoPais(res.data.ip.countryAbbreviator);
+          setCodEstado(res.data.ip.stateCode);
+          setIsoEstado(res.data.ip.stateAbbreviator);
+          setNote(res.data.ip.note);
+          setMap(res.data.ip.map);
       }catch(erro){
           alert("IP inválido!");
       }
@@ -165,8 +170,8 @@ function Search() {
               <p><span>Sigla do país: {isoPais}</span></p>
               <p><span>Código do estado: {codEstado}</span></p>
               <p><span>Sigla do estado: {isoEstado}</span></p>
-              <p><span>Observações: </span></p>
-              <p><span>Mapa: </span></p>
+              <p><span>Observações: {note}</span></p><br/>
+              <img src={map} alt="Mapa"/>
           </div>
         }
       </header>

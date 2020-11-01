@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import kwelo from '../../Kwelo';
 import {Link} from 'react-router-dom';
 import api from '../../services/api';
 import './styles/tela_search_adm_grande.css';
@@ -89,19 +88,21 @@ function Search() {
       else{
         try{
           const res = await api.get(`ip/${insert}`);
-          setIp(res.data.data.ip_address); //atualiza o estado para o valor recebido pela requisição
-          setCidade(res.data.data.geolocation.city.names.en);
-          setContinente(res.data.data.geolocation.continent.names["pt-BR"]);
-          setPais(res.data.data.geolocation.country.names["pt-BR"]);
-          setRaio(res.data.data.geolocation.location.accuracy_radius);
-          setLatitude(res.data.data.geolocation.location.latitude);
-          setLongitude(res.data.data.geolocation.location.longitude);
-          setTimeZone(res.data.data.geolocation.location.time_zone);
-          setPostal(res.data.data.geolocation.postal.code);
-          setCodPais(res.data.data.geolocation.registered_country.geoname_id);
-          setIsoPais(res.data.data.geolocation.registered_country.iso_code);
-          setCodEstado(res.data.data.geolocation.subdivisions[0].geoname_id);
-          setIsoEstado(res.data.data.geolocation.subdivisions[0].iso_code);
+          setIp(res.data.ip.ip); //atualiza o estado para o valor recebido pela requisição
+          setCidade(res.data.ip.city);
+          setContinente(res.data.ip.continent);
+          setPais(res.data.ip.country);
+          setRaio(res.data.ip.radius);
+          setLatitude(res.data.ip.latitude);
+          setLongitude(res.data.ip.longitude);
+          setTimeZone(res.data.ip.timezone);
+          setPostal(res.data.ip.postal);
+          setCodPais(res.data.ip.countryCode);
+          setIsoPais(res.data.ip.countryAbbreviator);
+          setCodEstado(res.data.ip.stateCode);
+          setIsoEstado(res.data.ip.stateAbbreviator);
+          setNote(res.data.ip.note);
+          setMap(res.data.ip.map);
       }catch(erro){
           alert("IP inválido!");
       }
