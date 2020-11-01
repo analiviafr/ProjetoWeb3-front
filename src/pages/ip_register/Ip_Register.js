@@ -25,6 +25,67 @@ function IpRegister() {
 
   async function onRegisterSubmit(e) {
     e.preventDefault();
+    //Validação de campos obrigatórios vazios
+    if(!ip){
+      setError('Por favor, preencha o campo de IP.');
+      return;
+    }
+    if(!city){
+      setError('Por favor, preencha o campo de cidade.');
+      return;
+    }
+    if(!continent){
+      setError('Por favor, preencha o campo de continente.');
+      return;
+    }
+    if(!country){
+      setError('Por favor, preencha o campo de país.');
+      return;
+    }
+    if(!latitude){
+      setError('Por favor, preencha o campo de latitude.');
+      return;
+    }
+    if(!longitude){
+      setError('Por favor, preencha o campo de longitude.');
+      return;
+    }
+    if(!timezone){
+      setError('Por favor, preencha o campo de fuso horário.');
+      return;
+    }
+    if(!radius){
+      setError('Por favor, preencha o campo de raio de precisão.');
+      return;
+    }
+    if(!postal){
+      setError('Por favor, preencha o campo de código postal.');
+      return;
+    }
+    if(!countryCode){
+      setError('Por favor, preencha o campo de código do país.');
+      return;
+    }
+    if(!countryAbbreviator){
+      setError('Por favor, preencha o campo de sigla do país.');
+      return;
+    }
+    if(!stateCode){
+      setError('Por favor, preencha o campo de código do estado.');
+      return;
+    }
+    if(!stateAbbreviator){
+      setError('Por favor, preencha o campo de sigla do estado.');
+      return;
+    }
+    if(!map){
+      setError('Por favor, adicione um mapa.');
+      return;
+    }
+    //caso não seja adicionada uma observação
+    if(!note){
+      setNote('Sem observações.');
+    }
     const data = {
       ip,
       city,
