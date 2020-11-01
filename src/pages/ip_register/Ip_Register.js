@@ -18,6 +18,7 @@ function IpRegister() {
   const [stateCode, setStateCode] = useState('');
   const [stateAbbreviator, setStateAbbreviator] = useState('');
   const [note, setNote] = useState('');
+  const [map, setMap] = useState('');
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
 
@@ -27,10 +28,43 @@ function IpRegister() {
       const token = await axios.post('https://reqres.in/api/register');
       setMessage('Cadastro realizado com sucesso!');
       setTimeout(function () {
-        window.location = '/ProjetoWeb2/#/ipregister';
-      }, 1500);
+        setMessage('');
+        setIp('');
+        setCity('');
+        setContinent('');
+        setCountry('');
+        setLatitude('');
+        setLongitude('');
+        setTimezone('');
+        setRadius('');
+        setPostal('');
+        setCountryCode('');
+        setCountryAbbreviator('');
+        setStateCode('');
+        setStateAbbreviator('');
+        setNote('');
+        setMap('');
+      }, 2000);
     }catch(error){
       setError('Houve um erro e não foi possível completar o cadastro. Tente novamente mais tarde.');
+      setTimeout(function () {
+        setError('');
+        setIp('');
+        setCity('');
+        setContinent('');
+        setCountry('');
+        setLatitude('');
+        setLongitude('');
+        setTimezone('');
+        setRadius('');
+        setPostal('');
+        setCountryCode('');
+        setCountryAbbreviator('');
+        setStateCode('');
+        setStateAbbreviator('');
+        setNote('');
+        setMap('');
+      }, 2000);
     }
   }
 
@@ -84,7 +118,7 @@ function IpRegister() {
       <h2 className="mapTitle">Mapa:</h2>
       <br/>
 
-      <input id="map" type="file" accept="image/*,video/*"/>
+      <input id="map" type="file" accept="image/*,video/*" value={map} onChange={e => setMap(e.target.value)}/>
       <br/>
 
       <button className="RegisterIpBtn" type="submit">Cadastrar</button>
