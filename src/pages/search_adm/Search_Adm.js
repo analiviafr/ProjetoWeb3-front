@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState}, {useEffect} from 'react';
 import kwelo from '../../Kwelo';
 import {Link} from 'react-router-dom';
+import api from '../../services/api';
 import './styles/tela_search_adm_grande.css';
 import './styles/tela_search_adm_media.css';
 import './styles/tela_search_adm_pequena.css';
@@ -111,6 +112,10 @@ function Search() {
     alert("Usuário deslogado com sucesso!");
     window.location = '/ProjetoWeb2/#/';
   }
+
+  useEffect(() => {
+    api.get('ip/register')
+  }, []);
 
   return(
     <div>

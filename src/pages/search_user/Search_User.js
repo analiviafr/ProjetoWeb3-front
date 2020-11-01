@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState}, {useEffect} from 'react';
 import kwelo from '../../Kwelo';
 import './styles/tela_search_user_grande.css';
 import './styles/tela_search_user_media.css';
 import './styles/tela_search_user_pequena.css';
+import api from '../../services/api';
 import logo from './img/logo.png';
 
 function Search() {
