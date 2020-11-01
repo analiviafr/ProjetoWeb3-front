@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import api from '../../services/api';
 import './Ip_Register.css';
 
 function IpRegister() {
@@ -24,8 +25,25 @@ function IpRegister() {
 
   async function onRegisterSubmit(e) {
     e.preventDefault();
+    const data = {
+      ip,
+      city,
+      continent,
+      country,
+      latitude,
+      longitude,
+      timezone,
+      radius,
+      postal,
+      countryCode,
+      countryAbbreviator,
+      stateCode,
+      stateAbbreviator,
+      note,
+      map,
+    };
     try{
-      const token = await axios.post('https://reqres.in/api/register');
+      await api.post('ip/ipregister', data);
       setMessage('Cadastro realizado com sucesso!');
       setTimeout(function () {
         setMessage('');

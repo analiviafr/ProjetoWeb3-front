@@ -164,6 +164,8 @@ function Search() {
               <p><span>Sigla do país: {isoPais}</span></p>
               <p><span>Código do estado: {codEstado}</span></p>
               <p><span>Sigla do estado: {isoEstado}</span></p>
+              <p><span>Observações: </span></p>
+              <p><span>Mapa: </span></p>
           </div>
         }
       </header>
