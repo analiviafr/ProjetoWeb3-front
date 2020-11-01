@@ -1,4 +1,4 @@
-import React, {useState}, {useEffect} from 'react';
+import React, {useState} from 'react';
 import kwelo from '../../Kwelo';
 import {Link} from 'react-router-dom';
 import api from '../../services/api';
@@ -112,10 +112,6 @@ function Search() {
     alert("Usuário deslogado com sucesso!");
     window.location = '/ProjetoWeb2/#/';
   }
-
-  useEffect(() => {
-    api.get('ip/register')
-  }, []);
 
   return(
     <div>

@@ -1,4 +1,4 @@
-import React, {useState}, {useEffect} from 'react';
+import React, {useState} from 'react';
 import kwelo from '../../Kwelo';
 import './styles/tela_search_user_grande.css';
 import './styles/tela_search_user_media.css';
