@@ -77,10 +77,6 @@ function Search() {
         alert("O último caracter não pode ser '.'!");
         setInsert(''); //limpa o campo de texto
       }
-      else if(insert==parseInt(insert,10)){ //verifica se há apenas números no campo busca (é necessário números e pontos)
-        alert("É necessário incluir os '.' no endereço IP!");
-        setInsert(''); //limpa o campo de texto
-      }
       else if(i==1){ //se i for 1 é porque há apenas caracteres ou caracteres misturados com números na string, logo, ela não é válida
         alert("Por favor, insira apenas números e '.' no campo de busca!");
         setInsert(''); //limpa o campo de texto
@@ -109,7 +105,8 @@ function Search() {
           }
           setMap(res.data.ip.map);
       }catch(erro){
-          alert("IP inválido!");
+        console.log(erro);
+        alert("IP inválido!");
       }
       setInsert(''); //limpa o campo de texto
     }
