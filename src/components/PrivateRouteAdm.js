@@ -2,7 +2,6 @@ import React from 'react';
 //import {isAdm} from './auth';
 import { Route, Redirect } from 'react-router-dom';
 
-
 function isAdm ({
   role = localStorage.getItem('app-token:role');
   if (role === 'admin') {
