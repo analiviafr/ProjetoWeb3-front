@@ -4,9 +4,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 function isAdm ({
   role = localStorage.getItem('app-token:role');
-  if (role === 'admin') {
-    return role;
-  }
+  if (role === 'admin') return role;
 )};
 
 const PrivateRouteAdm = ({component: Component, ...rest}) => (
