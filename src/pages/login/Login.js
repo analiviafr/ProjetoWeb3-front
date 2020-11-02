@@ -52,14 +52,20 @@ export default function Login() {
 
       if (localStorage.getItem('app-token:role') === 'admin') {
         setRole(localStorage.getItem('app-token:role'));
+        setTimeout(function () {
+          window.location = '/ProjetoWeb2/#/searchadm';
+         }, 2000);
       }
       else {
         setRole(null);
+        setTimeout(function () {
+          window.location = '/ProjetoWeb2/#/search';
+         }, 2000);
       }
 
-      setTimeout(function () {
-        window.location = '/ProjetoWeb2/#/search';
-       }, 2000);
+      /*setTimeout(function () {
+        window.location = '/ProjetoWeb2/#/searchadm';
+      }, 2000);*/
 
     } catch{
       setError('Endereço de email ou senha inválido.');

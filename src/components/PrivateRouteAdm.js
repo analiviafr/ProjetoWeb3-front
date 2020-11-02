@@ -18,7 +18,7 @@ const PrivateRouteAdm = ({component: Component, ...rest}) => (
       )
     }
   />
-);*/
+);
 
 /*const isAdm;
 if (localStorage.getItem('app-token:role') === 'admin') {
