@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 //import {isAdm} from './auth';
 import { Route, Redirect } from 'react-router-dom';
 
@@ -38,4 +38,4 @@ const PrivateRouteAdm = ({component: Component, ...rest}) => (
   />
 );*/
 
-export default PrivateRouteAdm
+//export default PrivateRouteAdm

@@ -49,7 +49,7 @@ function IpRegister() {
       method: "POST",
       body: formData,
     }).then(response => response.json());
-    
+
     if(response.status){
       setMessage('Cadastro realizado com sucesso!');
       setTimeout(function () {
