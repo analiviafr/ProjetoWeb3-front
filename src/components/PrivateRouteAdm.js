@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 const PrivateRouteAdm = ({component: Component, ...rest}) => (
-  const isAdm = null;
+  const isAdm;
   if (localStorage.getItem('app-token:role') === 'admin') {
     isAdm = 'admin';
   }
