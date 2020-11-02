@@ -49,6 +49,7 @@ input[type=password], focus {
 }
 
 #roleSelect{
+  padding-left: -100px;
   border: none;
   background-color: #EDDEF2;
   color: rgb(138, 5, 190);
@@ -58,6 +59,11 @@ input[type=password], focus {
   width: 51%;
   border-radius: 6.25rem;
   transition: all .2s linear;
+}
+
+#roleSelect, focus{
+  box-shadow: 5px 4px 4px rgba(138,5,190,.35);
+  outline:none;
 }
 
 .Voltar-btn{
