@@ -9,7 +9,7 @@ import SearchAdm from '../pages/search_adm';
 import Home from '../pages/home';
 import NotFound from './NotFound';
 import PrivateRoute from './PrivateRoute';
-import PrivateRouteAdm from './PrivateRoute';
+import PrivateRouteAdm from './PrivateRouteAdm';
 
 const Routes = () => (
   <HashRouter>
