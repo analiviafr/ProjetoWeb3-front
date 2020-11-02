@@ -101,7 +101,12 @@ function Search() {
           setIsoPais(res.data.ip.countryAbbreviator);
           setCodEstado(res.data.ip.stateCode);
           setIsoEstado(res.data.ip.stateAbbreviator);
-          setNote(res.data.ip.note);
+          if(!res.data.ip.note){
+            setNote('Sem observações.');
+          }
+          else{
+            setNote(res.data.ip.note);
+          }
           setMap(res.data.ip.map);
       }catch(erro){
           alert("IP inválido!");

@@ -82,10 +82,6 @@ function IpRegister() {
       setError('Por favor, adicione um mapa.');
       return;
     }
-    //caso não seja adicionada uma observação
-    if(!note){
-      setNote('Sem observações.');
-    }
     const data = {
       ip,
       city,
@@ -104,57 +100,10 @@ function IpRegister() {
       map,
     };
     try{
-      //Checa se o IP já existe no bd
-      const res = await api.get(`ip/${ip}`);
-      if(!res){
-        await api.post('ip/ipregister', data);
-        setMessage('Cadastro realizado com sucesso!');
-        setTimeout(function () {
-          setMessage('');
-          setIp('');
-          setCity('');
-          setContinent('');
-          setCountry('');
-          setLatitude('');
-          setLongitude('');
-          setTimezone('');
-          setRadius('');
-          setPostal('');
-          setCountryCode('');
-          setCountryAbbreviator('');
-          setStateCode('');
-          setStateAbbreviator('');
-          setNote('');
-          setMap('');
-        }, 2000);
-      }
-      else{
-        setError('IP já cadastrado no sistema. Não foi possível concluir o cadastro.');
-        setTimeout(function () {
-          setMessage('');
-          setIp('');
-          setCity('');
-          setContinent('');
-          setCountry('');
-          setLatitude('');
-          setLongitude('');
-          setTimezone('');
-          setRadius('');
-          setPostal('');
-          setCountryCode('');
-          setCountryAbbreviator('');
-          setStateCode('');
-          setStateAbbreviator('');
-          setNote('');
-          setMap('');
-          setError('');
-        }, 2000);
-      }
-    }catch(error){
-      console.log(error);
-      setError('Houve um erro e não foi possível completar o cadastro. Tente novamente mais tarde.');
+      await api.post('ip/ipregister', data);
+      setMessage('Cadastro realizado com sucesso!');
       setTimeout(function () {
-        /*setError('');
+        setMessage('');
         setIp('');
         setCity('');
         setContinent('');
@@ -169,7 +118,27 @@ function IpRegister() {
         setStateCode('');
         setStateAbbreviator('');
         setNote('');
-        setMap('');*/
+        setMap('');
+      }, 2000);
+    }catch(error){
+      setError('Houve um erro e não foi possível completar o cadastro. Tente novamente mais tarde.');
+      setTimeout(function () {
+        setError('');
+        setIp('');
+        setCity('');
+        setContinent('');
+        setCountry('');
+        setLatitude('');
+        setLongitude('');
+        setTimezone('');
+        setRadius('');
+        setPostal('');
+        setCountryCode('');
+        setCountryAbbreviator('');
+        setStateCode('');
+        setStateAbbreviator('');
+        setNote('');
+        setMap('');
       }, 2000);
     }
   }
@@ -177,7 +146,7 @@ function IpRegister() {
   return (
     <div className="IpRegister">
     <h1>Cadastro de IP:</h1>
-    <form onSubmit={onRegisterSubmit} method="POST" enctype="multipart/form-data">
+    <form onSubmit={onRegisterSubmit} method="POST" encType="multipart/form-data">
 
       <input id="ipr" type="ipr" value={ip} placeholder="Digite o IP" onChange={e => setIp(e.target.value)}/>
       <br/>
