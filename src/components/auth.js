@@ -9,3 +9,5 @@ function isAdm({
     return false;
   }
 });
+
+export default isAdm

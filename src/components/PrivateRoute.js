@@ -36,4 +36,4 @@ const PrivateRouteAdm = ({component: Component, ...rest}) => (
 });*/
 
 export default PrivateRoute
-//export default PrivateRouteAdm
+export default PrivateRouteAdm
