@@ -48,8 +48,9 @@ input[type=password], focus {
   outline:none;
 }
 
-#roleSelect{
-  padding-left: 20%;
+#Role-Select{
+  padding-left: 90px;
+  margin-left: 0px;
   border: none;
   background-color: #EDDEF2;
   color: rgb(138, 5, 190);
