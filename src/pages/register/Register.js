@@ -79,8 +79,6 @@ function Register() {
           <option value="admin">Administrador</option>
         </select>
         <br/>
-        <br/>
-
 
         <Link to="/"><button className="Voltar-btn">Voltar</button></Link>
         <button className="Register-btn" type="submit">Cadastrar</button>
