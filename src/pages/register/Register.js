@@ -74,11 +74,12 @@ function Register() {
         <br/>
 
         <label htmlFor="role">Escolha sua credencial: </label>
-        <select value={role} onChange={e => setRole(e.target.value)}>
+        <select value={role} className="roleSelect" onChange={e => setRole(e.target.value)}>
           <option disabled defaultValue> </option>
           <option value="user">Usuário</option>
           <option value="admin">Administrador</option>
         </select>
+        <br/>
 
         <Link to="/"><button className="Voltar-btn">Voltar</button></Link>
         <button className="Register-btn" type="submit">Cadastrar</button>
