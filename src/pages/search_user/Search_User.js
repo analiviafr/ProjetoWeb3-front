@@ -103,7 +103,7 @@ function Search() {
           setNote(res.data.ip.note);
           setMap(res.data.ip.map);
       }catch(erro){
-          alert("IP inválido!");
+        alert("IP inválido!");
       }
       setInsert(''); //limpa o campo de texto
     }

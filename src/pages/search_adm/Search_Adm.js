@@ -158,7 +158,7 @@ function Search() {
         </div>
         {
           ip &&
-          <div className="resultado">
+          <div className="resultado1">
               <p><span>IP: {ip}</span></p>
               <p><span>Cidade: {cidade}</span></p>
               <p><span>Continente: {continente}</span></p>

@@ -151,11 +151,11 @@
     outline:none;
   }
 
-  .resultado{
+  .resultado1{
     line-height: 28px;
     font-size: 20px;
-    margin-top: 120px;
-    margin-left: -33%;
+    margin-top: 220px;
+    margin-left: auto;
     position: fixed;
     color: rgb(138, 5, 190);
     font-weight: bold;
