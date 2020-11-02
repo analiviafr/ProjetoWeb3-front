@@ -73,8 +73,8 @@ function Register() {
         <input id="password" type="password" value={password} placeholder="Digite sua senha" onChange={e => setPassword(e.target.value)}/>
         <br/>
 
-        <label htmlFor="role">Escolha sua credencial: </label>
-        <select value={role} className="roleSelect" onChange={e => setRole(e.target.value)}>
+        //<label htmlFor="role">Escolha sua credencial: </label>
+        <select value={role} className="roleSelect" placeholder="Escolha sua credencial" onChange={e => setRole(e.target.value)}>
           <option disabled defaultValue> </option>
           <option value="user">Usuário</option>
           <option value="admin">Administrador</option>
