@@ -17,29 +17,10 @@ const PrivateRoute = ({component: Component, ...rest}) => (
   />
 );
 
-function PrivateRouteAdm({
-  if (localStorage.getItem('app-token:role') === 'admin') return <Redirect to={{pathname: '/searchadm', state: {from:props.location}}} />;
+/*function PrivateRouteAdm({
+  if (localStorage.getItem('app-token:role') === 'admin') return <Redirect to={{pathname: '/', state: {from:props.location}}} />;
   return <Route {...rest} render={props => <Component {...props} />} />;
-});
-
-/*const PrivateRouteAdm = ({component: Component, ...rest}) => (
-  <Route
-    {...rest}
-    render={props =>
-      isAdm() ? (
-        <Component {...props} />
-      ) : (
-        <Redirect to = {{pathname: '/searchadm', state: {from:props.location}}} />
-      )
-    }
-  />
-);*/
-
-
-/*props => {
-  const isLogged = !!localStorage.getItem('app-token')
-  return isLogged ? <Route {...props}/> : <Redirect to="/"/>
-}*/
+});*/s
 
 export default PrivateRoute
 export default PrivateRouteAdm

@@ -17,7 +17,7 @@ const Routes = () => (
       <Route exact path="/login" component={Login}/>
       <Route exact path="/register" component={Register}/>
       <PrivateRoute path="/search" component={SearchUser}/>
-      <PrivateRouteAdm path="/searchadm" component={SearchAdm}/>
+      <PrivateRoute path="/searchadm" component={SearchAdm}/>
       <PrivateRoute path="/ipregister" component={IpRegister}/>
       <Route exact path="/" component={Home}/>
       <Route component={NotFound}/>
