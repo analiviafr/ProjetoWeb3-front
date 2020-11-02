@@ -49,11 +49,11 @@ input[type=password], focus {
 }
 
 #roleSelect{
+  padding-left: 20%;
   border: none;
   background-color: #EDDEF2;
   color: rgb(138, 5, 190);
   margin-top: 1rem;
-  margin-right: 10px;
   font-size: 1.2rem;
   width: 51%;
   border-radius: 6.25rem;
