@@ -1,6 +1,6 @@
 import React from 'react';
 import {isAuthenticated} from './auth';
-import {isAdm} from './auth';
+//import {isAdm} from './auth';
 
 import { Route, Redirect } from 'react-router-dom';
 
@@ -17,7 +17,12 @@ const PrivateRoute = ({component: Component, ...rest}) => (
   />
 );
 
-const PrivateRouteAdm = ({component: Component, ...rest}) => (
+function PrivateRouteAdm({
+  if (localStorage.getItem('app-token:role') === 'admin') {
+    return <Redirect to={{pathname: '/searchadm', state: {from:props.location}}} />;
+}
+
+/*const PrivateRouteAdm = ({component: Component, ...rest}) => (
   <Route
     {...rest}
     render={props =>
@@ -28,7 +33,8 @@ const PrivateRouteAdm = ({component: Component, ...rest}) => (
       )
     }
   />
-);
+);*/
+
 
 /*props => {
   const isLogged = !!localStorage.getItem('app-token')
