@@ -102,9 +102,9 @@ function Search() {
           else{
             setNote(res.data.ip.note);
           }
-          setMap(res.data.ip.map);
+          setMap("http://localhost:3000/files/"+res.data.ip.map);
       }catch(erro){
-        alert("IP inválido!");
+        alert("IP não encontrado!");
       }
       setInsert(''); //limpa o campo de texto
     }
@@ -157,7 +157,7 @@ function Search() {
         </div>
         {
           ip &&
-          <div className="resultado">
+          <div className="res">
               <p><span>IP: {ip}</span></p>
               <p><span>Cidade: {cidade}</span></p>
               <p><span>Continente: {continente}</span></p>
@@ -172,7 +172,7 @@ function Search() {
               <p><span>Código do estado: {codEstado}</span></p>
               <p><span>Sigla do estado: {isoEstado}</span></p>
               <p><span>Observações: {note}</span></p><br/>
-              <img src={map} alt="Mapa"/>
+              <img className="img" src={map} alt="Mapa"/>
           </div>
         }
       </header>

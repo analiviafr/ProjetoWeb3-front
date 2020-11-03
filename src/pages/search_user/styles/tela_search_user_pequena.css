@@ -128,14 +128,23 @@
     outline:none;
   }
 
-  .resultado{
+  .res{
     line-height: 28px;
     font-size: 20px;
-    margin-top: 220px;
-    margin-left: auto;
+    margin-top: 180px;
+    margin-left: -40%;
     position: fixed;
     color: rgb(138, 5, 190);
     font-weight: bold;
+  }
+
+  .img{
+    height: 200px;
+    max-width: 400px;
+    width: auto;
+    margin-left: 110%;
+    margin-top: -340px;
+    position: absolute;
   }
 
 }
