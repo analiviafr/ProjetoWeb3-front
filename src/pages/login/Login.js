@@ -50,7 +50,11 @@ export default function Login() {
       setFlag(localStorage.getItem('app-token'));
       setMessage('Login realizado com sucesso! Você será redirecionado(a) para a página de Pesquisa.');
 
-      if (localStorage.getItem('app-token:role') === 'admin') {
+      setTimeout(function () {
+        window.location = '/ProjetoWeb2/#/searchadm';
+      }, 2000);
+
+      /*if (localStorage.getItem('app-token:role') === 'admin') {
         setRole(localStorage.getItem('app-token:role'));
         setTimeout(function () {
           window.location = '/ProjetoWeb2/#/searchadm';
@@ -61,7 +65,7 @@ export default function Login() {
         setTimeout(function () {
           window.location = '/ProjetoWeb2/#/search';
         }, 2000);
-      }
+      }*/
 
       /*setTimeout(function () {
         window.location = '/ProjetoWeb2/#/search';

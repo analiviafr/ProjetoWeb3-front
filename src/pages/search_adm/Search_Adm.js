@@ -103,9 +103,10 @@ function Search() {
           else{
             setNote(res.data.ip.note);
           }
-          setMap(res.data.ip.map);
+          setMap(`/uploads/${res.data.ip.map}`);
+          alert(map);
+          console.log(map);
       }catch(erro){
-        console.log(erro);
         alert("IP inválido!");
       }
       setInsert(''); //limpa o campo de texto
