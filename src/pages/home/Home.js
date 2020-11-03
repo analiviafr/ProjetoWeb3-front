@@ -22,7 +22,7 @@ import logo2 from './img/logo2.png';
 class Home extends React.Component{
   render(){
     return (
-      <div>
+      <section>
           <meta charSet="utf-8"></meta>
           <meta name="viewport" content="width=device-width"/>
           <link rel="shortcut icon" href={icon} type="image/x-icon"/>
@@ -246,7 +246,7 @@ class Home extends React.Component{
                 </div>
                 </div>
             </footer>
-      </div>
+      </section>
     );
   }
 }
