@@ -54,17 +54,17 @@ export default function Login() {
         setRole(localStorage.getItem('app-token:role'));
         setTimeout(function () {
           window.location = '/ProjetoWeb2/#/searchadm';
-         }, 2000);
+        }, 2000);
       }
       else {
         setRole(null);
         setTimeout(function () {
           window.location = '/ProjetoWeb2/#/search';
-         }, 2000);
+        }, 2000);
       }
 
       /*setTimeout(function () {
-        window.location = '/ProjetoWeb2/#/searchadm';
+        window.location = '/ProjetoWeb2/#/search';
       }, 2000);*/
 
     } catch{
