@@ -102,7 +102,7 @@ function Search() {
           else{
             setNote(res.data.ip.note);
           }
-          setMap(`${process.env.REACT_APP_API_URL}/files/${res.data.ip.map}`);
+          setMap(`${process.env.REACT_APP_API_URL}files/${res.data.ip.map}`);
       }catch(erro){
         alert("IP não encontrado!");
       }
