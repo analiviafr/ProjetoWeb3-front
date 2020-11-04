@@ -90,7 +90,7 @@ function IpRegister() {
     }
 
     //Conectando com a API
-    const response = await fetch('http://localhost:3000/ip/ipregister', {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/ip/ipregister`, {
         method: "POST",
         body: formData,
       }).then(response => response.json());
