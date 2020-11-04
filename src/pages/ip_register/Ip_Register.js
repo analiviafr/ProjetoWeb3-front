@@ -140,7 +140,7 @@ function IpRegister() {
       <input ref={register} id="timezone" name="timezone" type="timezone" placeholder="Digite o fuso horário"/>
       <br/>
 
-      <input ref={register} id="radius" name="radius" type="radius" placeholder="Digite o raio de precisão"/>
+      <input ref={register} id="radius" name="radius" type="radius" placeholder="Digite o raio de precisão (apenas números - em km)"/>
       <br/>
 
       <input ref={register} id="postal" name="postal" type="postal" placeholder="Digite o código postal"/>
