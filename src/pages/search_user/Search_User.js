@@ -165,7 +165,7 @@ function Search() {
               <p><span>Latitude: {latitude}</span></p>
               <p><span>Longitude: {longitude}</span></p>
               <p><span>Fuso horário: {timeZone}</span></p>
-              <p><span>Raio de precisão: {raio}</span></p>
+              <p><span>Raio de precisão: {raio} km</span></p>
               <p><span>Código postal: {postal}</span></p>
               <p><span>Código do país: {codPais}</span></p>
               <p><span>Sigla do país: {isoPais}</span></p>
