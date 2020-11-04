@@ -95,6 +95,7 @@ function IpRegister() {
         body: formData,
       }).then(response => response.json());
     if(response.status==true){
+      setError('');
       setMessage('IP cadastrado com sucesso.');
       //limpa os campos de Cadastro
       setTimeout(() => {
