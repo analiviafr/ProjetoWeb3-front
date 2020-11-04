@@ -101,7 +101,7 @@ function IpRegister() {
         setMessage('');
         setError('');
         document.getElementById("form").reset();
-      }, 2000);
+      }, 3500);
     }
     else{
       setError('Houve um erro no cadastro. Tente novamente mais tarde.');
@@ -110,7 +110,7 @@ function IpRegister() {
         setMessage('');
         setError('');
         document.getElementById("form").reset();
-      }, 2000);
+      }, 3500);
     }
   }
 
